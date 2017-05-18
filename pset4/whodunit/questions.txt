@@ -1,0 +1,61 @@
+1.  What's stdint.h?
+        => Defines a set of integer types having specified widths.
+        => Defines its corresponding macro functions to create values of these types.
+        => Define macros that specify limits of integer types corresponding to types defined in other standard headers.
+             
+2.  What's the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program?
+        => uintN_t Declares a constant width of N number of bits across all implementation.
+        => uint is an unassigned integer type whereby it cannot be negative.
+   
+3.  How many bytes is a BYTE, a DWORD, a LONG, and a WORD, respectively?
+    uint8_t BYTE
+        => Declares a BYTE as 8 bits in length
+        => (1 BYTE)
+        
+    uint32_t DWORD
+        => Declares a DWORD as 32 bits in length
+        => (4 BYTES)
+    
+    int32_t LONG
+        => Declares a LONG as 32 bits in length
+        => (4 BYTES)
+        
+    uint16_t WORD
+        => Declares a WORD as 16 bits in length
+        => (2 BYTES)
+    
+    // Previously in history of computer architecture,
+    // Originally C was made as 16bit and 32bit was signed as "long".
+    // As processors got better, the default int became 32bit and for backwards compatibility, "long" was kept 32bit.
+    // Later, in turn, more space was needed and a 64bit was made and signed "long long".
+    // Only on certain compilers, you may obtain a 128bit data type with signed "long long long". 
+    
+4.  What (in ASCII, dec or hex) must the first two bytes of any BMP files be?
+    Leading bytes used to identify file formats (with high probability) are generally called "magic numbers".
+    => The first two bytes of the file must contain the ASCII characters "B" followed by "M."
+
+5.  What's the difference between bfSize and biSize?
+    => bfSize = Whole BMP file size (include pixels, padding and header)
+    => biSize = Number of bytes required by BITMAPINFOHOLDER structure (depends on value of biCompression)
+    
+6.  What does it mean if biHeight is negative?
+    => pixel data ordered from upper left corner. (if positive @ lower left)
+
+7.  What field in BITMAPINFOHEADER specifies the BMP's color depth (bits per pixel)?
+    => biBitCount
+
+8.  Why might fopen return NULL in lines 24 and 32 of copy.c?
+    => fopen returns NULL if the file is too large and there is no space to store them
+
+9.  Why is the third argument to fread always 1 in our code?
+    => It counts the number of elements
+
+10. What value does line 65 of copy.c assign to padding if bi.biWidth is 3?
+    => 1
+
+11. What does fseek do?
+    => Used to change the file position of the stream
+    
+12. What is SEEK_CUR?
+    => Integer constant used as whence argument for fseek
+    => Specifies offsetprovided is relative to current file position
