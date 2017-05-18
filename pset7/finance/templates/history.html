@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>
+                <p>Symbol</p>
+            </th>
+            <th>
+                <p>Quantity</p>
+            </th>
+            <th>
+                <p>Price</p>
+            </th>
+            <th>
+                <p>Method</p>
+            </th>
+            <th>
+                <p>Date & Time</p>
+            </th>
+        </tr>
+    {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction["symbol"] }}</td>
+            <td>{{ transaction["share"] }}</td>
+            <td>{{ transaction["price"] }}</td>
+            <td>{{ transaction["method"] }}</td>
+            <td>{{ transaction["timestamp"] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

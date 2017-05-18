@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Assets
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>
+                <p>Symbol</p>
+            </th>
+            <th>
+                <p>Quantity</p>
+            </th>
+            <th>
+                <p>Price</p>
+            </th>
+            <th>
+                <p>Value</p>
+            </th>
+        </tr>
+    {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction }}</td>
+            <td>{{ transactions[transaction]["share"] }}</td>
+            <td>{{ transactions[transaction]["price"] }}</td>
+            <td>{{ transactions[transaction]["share"] * transactions[transaction]["price"] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <br>
+    <br>
+    <p>
+        Remaining Cash: {{ cash }}.
+    </p>
+    <p>
+        Stock value: {{ stock }}.
+    </p>
+    <p>
+        Total Assets: {{ total }}.
+    </p>
+{% endblock %}
