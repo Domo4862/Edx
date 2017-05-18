@@ -1,0 +1,40 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+    Short medical terminology: Silicosis.
+    Occupational lung disease caused by inhalation of very fine silicate or quartz dust.
+    Pset related: Longest word in problem set dictionary (45 letters)
+    
+1.  According to its man page, what does getrusage do?
+    Returns  resource  usage  measures  for either (self, children or thread).
+    On success returns 0. On error returns -1.
+
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+    16.
+
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate,
+    even though we’re not changing their contents?
+    By not introducing new variables, passing these by reference allows faster calculation.
+    
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about reading words
+    from a file. In other words, convince us that you indeed understand how that function’s for loop works.
+    1) First initialises the int value to the result of fgetc(fp).
+    2) As the condition is not end-of-file, it continues to get character by character until it reaches end-of-file.
+    3) For each character, it is filtered.
+        i) First "if" - filters alphabetical and apostrophes
+       ii) Second "if" - Ignores any words containing numbers (example: K9, WW2, P45)
+      iii) Third "if" - When the character is neither an alphabet or a number.
+                        We assume its a space and begin analyse for misspellings.
+                        Once done, resets the index pointer to prepare for new word.
+                        
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather than
+    use fscanf with a format string like "%s" to read whole words at a time?
+    Put another way, what problems might arise by relying on fscanf alone?
+    1) You must know the exact data layout of the input file in advance and rewrite the function call
+        for every different layout.
+    2) Difficult to read text strings containing spaces as fscanf see spaces as field delimiters.
+        Field delimiters e.g (semicolons, parentheses, brackets + (angle and curly)).
+        
+    By using fgetc, we can read character by character and ensure it is a valid character.
+    
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+    The parameters assigned to check and load must not be altered in any way.
+    
