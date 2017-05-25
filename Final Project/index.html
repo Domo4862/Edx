@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel = "stylesheet" href = "style.css"></link>
+  <script src = "tab.js" type = "text/javascript"></script>
+  <script src = "convert.js" type = "text/javascript"></script>
+</head>
+<body>
+  <div class="title">
+    <h2>Unit Converter <span class="glyphicon glyphicon-retweet"></span></h2>
+    <p>Select the desired unit category and fill in any one desired spaces</p>
+    <p>All conversions happen instantaneously as you type in</p>
+  </div>
+
+  <div class="big">
+    <div class="container-fluid">
+      <div class="tab">
+        <button class="tablinks" onclick="tab(event, 'Length')">Length</button>
+        <button class="tablinks" onclick="tab(event, 'Area')">Area</button>
+        <button class="tablinks" onclick="tab(event, 'Volume')">Volume</button>
+        <button class="tablinks" onclick="tab(event, 'Mass')">Mass</button>
+        <button class="tablinks" onclick="tab(event, 'Temperature')">Temperature</button>
+      </div>
+
+      <div id="Length" class="tabcontent">
+        <div class="container">
+          <div>
+            <p style = "text-decoration: underline"> Metric </p>
+
+            <div class="row">
+              <div class="col-sm">
+                    <p>
+                      <label>Millimetres: </label>
+                      <input id="mm" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Centimetres: </label>
+                      <input id="cm" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Metres: </label>
+                      <input id="m" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Kilometres: </label>
+                      <input id="km" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+            </div>
+              <p style = "text-decoration: underline"> Imperial </p>
+            <div>
+              <div class="col-sm">
+                    <p>
+                      <label>Inches: </label>
+                      <input id="in" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Feet: </label>
+                      <input id="ft" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Yards: </label>
+                      <input id="yard" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Miles: </label>
+                      <input id="mile" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+              <div class="col-sm">
+                    <p>
+                      <label>Nautical Mile: </label>
+                      <input id="naut" type="number" oninput="lengthConvert(this.id, this.value)" onchange="lengthConvert(this.id, this.value)">
+                    </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Area" class="tabcontent">
+        <div class="container">
+          <div>
+            <p style = "text-decoration: underline"> Metric </p>
+              <div class="row">
+                <div class="col-sm">
+                      <p>
+                        <label>Square Millimetres: </label>
+                        <input id="mm2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Centimetres: </label>
+                        <input id="cm2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Metres: </label>
+                        <input id="m2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Hectares: </label>
+                        <input id="Hectare" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Kilometres: </label>
+                        <input id="km2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+              </div>
+
+                  <p style = "text-decoration: underline"> Imperial </p>
+              <div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Inches: </label>
+                        <input id="in2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Feet: </label>
+                        <input id="ft2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Yard: </label>
+                        <input id="yard2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Acres: </label>
+                        <input id="Acre" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Square Mile: </label>
+                        <input id="mile2" type="number" oninput="areaConvert(this.id, this.value)" onchange="areaConvert(this.id, this.value)">
+                      </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Volume" class="tabcontent">
+          <div class="container">
+            <div>
+              <p style = "text-decoration: underline"> Volume (Mass) </p>
+                <div class="row">
+                  <div class="col-sm">
+                        <p>
+                          <label>Cubic Centimetres: </label>
+                          <input id="cm3" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Cubic Metres: </label>
+                          <input id="m3" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Cubic Inches: </label>
+                          <input id="in3" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Cubic Feet: </label>
+                          <input id="ft3" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                </div>
+                  <p style = "text-decoration: underline"> Volume (Liquid) </p>
+                <div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Litres: </label>
+                          <input id="l" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Hectolitres: </label>
+                          <input id="hl" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Fluid Ounces: </label>
+                          <input id="floz" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Pint: </label>
+                          <input id="pint" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>Gallon: </label>
+                          <input id="gal" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                </div>
+                  <p style = "text-decoration: underline"> US Volume (liquid) </p>
+                <div>
+                  <div class="col-sm">
+                        <p>
+                          <label>US Fluid Ounces: </label>
+                          <input id="USfloz" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>US pint: </label>
+                          <input id="USpint" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                  <div class="col-sm">
+                        <p>
+                          <label>US Gallon: </label>
+                          <input id="USgal" type="number" oninput="volumeConvert(this.id, this.value)" onchange="volumeConvert(this.id, this.value)">
+                        </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      <div id="Mass" class="tabcontent">
+        <div class="container">
+          <div>
+            <p style = "text-decoration: underline"> Metric </p>
+              <div class="row">
+                <div class="col-sm">
+                      <p>
+                        <label>Milligram: </label>
+                        <input id="mg" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                  <p>
+                    <label>Grams: </label>
+                    <input id="g" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                  </p>
+                </div>
+                <div class="col-sm">
+                  <p>
+                    <label>Kilograms: </label>
+                    <input id="kg" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                  </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Tonnes: </label>
+                        <input id="ton" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                      </p>
+                </div>
+              </div>
+                <p style = "text-decoration: underline"> Imperial </p>
+              <div>
+                <div class="col-sm">
+                      <p>
+                        <label>Ounces: </label>
+                        <input id="oz" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                      </p>
+                </div>
+                <div class="col-sm">
+                      <p>
+                        <label>Pounds: </label>
+                        <input id="lb" type="number" oninput="massConvert(this.id, this.value)" onchange="massConvert(this.id, this.value)">
+                      </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div id="Temperature" class="tabcontent">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                  <p>
+                    <label>Fahrenheit:</label>
+                    <input id="Fahrenheit" type="number" oninput="tempConvert(this.id, this.value)" onchange="tempConvert(this.id, this.value)">
+                  </p>
+            </div>
+            <div class="col">
+              <p>
+                <label>Celsius: </label>
+                <input id="Celcius" type="number" oninput="tempConvert(this.id, this.value)" onchange="tempConvert(this.id, this.value)">
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <label>Kelvin: </label>
+                <input id="Kelvin" type="number" oninput="tempConvert(this.id, this.value)" onchange="tempConvert(this.id, this.value)">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <div>
+    <p> Made by Domo4862. Made with <span class="glyphicon glyphicon-music"></span>, <span class="glyphicon glyphicon-leaf"></span> and <span class="glyphicon glyphicon-heart"></span></p>.
+  </div>
+</footer
