@@ -35,3 +35,6 @@ Problem Set 7: C$50 Finance (HTML, CSS, Python, SQL)
 
 Problem Set 8: Mashup (HTML, RSS, Python, Javascript, jQuery, AJAX, JSON, SQL)
 1. Mashup
+
+Final Project:
+Web-based Unit Converter between metric and imperial.
